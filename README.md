@@ -5,6 +5,8 @@
 **Cohorte**: DA-FT 05  
 **Fecha de entrega**: 08/08/2024  
 
+[![Captura-de-pantalla-2024-11-06-195154.png](https://i.postimg.cc/KYCJrH0f/Captura-de-pantalla-2024-11-06-195154.png)](https://postimg.cc/cKMRdXyt)
+
 ---
 
 ## Índice
