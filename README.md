@@ -10,8 +10,6 @@
 ---
 
 ## ÍNDICE
-
-## Índice
 1. [Introducción](#introducción)
 2. [Fuente de Origen y Carga de los Datos](#fuente-de-origen-y-carga-de-los-datos)
 3. [Transformación de Datos](#transformación-de-datos)
@@ -205,139 +203,139 @@ Adventure Works es una gran empresa multinacional de fabricación que produce y 
 - **EEUU Utilidad Neta**  
   - Descripción: Calcula la utilidad neta obtenida en Estados Unidos.
   - Fórmula: `EEUU Utilidad Neta = CALCULATE([Utilidad Neta], ALL(DimGeography[EnglishCountryRegionName]), DimGeography[EnglishCountryRegionName] = "United States")`
-**% COGS PA**:  
+- **% COGS PA**:  
 Descripción: Porcentaje de COGS del período anterior en relación con los ingresos.  
 Fórmula: % COGS PA = DIVIDE([COGS PA], [Ingresos PA])
 
-**% MargenUtilidadBruta PA**:  
+- **% MargenUtilidadBruta PA**:  
 Descripción: Porcentaje de margen de utilidad bruta del período anterior.  
 Fórmula: % MargenUtilidadBruta PA = DIVIDE([UtilidadBruta PA], [Ingresos PA])
 
-**% MargenUtilidad Neta PA**:  
+- **% MargenUtilidad Neta PA**:  
 Descripción: Porcentaje de margen de utilidad neta del período anterior.  
 Fórmula: % MargenUtilidad Neta PA = DIVIDE([Utilidad Neta PA], [Ingresos PA])
 
-**COGS PA**:  
+- **COGS PA**:  
 Descripción: Costo de bienes vendidos del período anterior.  
 Fórmula: COGS PA = CALCULATE([Costos], PREVIOUSYEAR(DimDate[FullDateAlternateKey]))
 
-**Ingresos Acumulados PA**:  
+- **Ingresos Acumulados PA**:  
 Descripción: Suma de los ingresos acumulados del período anterior.  
 Fórmula: Ingresos Acumulados PA = CALCULATE([Ingresos Acumulados], PREVIOUSYEAR(DimDate[FullDateAlternateKey]))
 
-**Ingresos PA**:  
+- **Ingresos PA**:  
 Descripción: Suma de los ingresos del período anterior.  
 Fórmula: Ingresos PA = CALCULATE([Ingresos], PREVIOUSYEAR(DimDate[FullDateAlternateKey]))
 
-**UtilidadBruta PA**:  
+- **UtilidadBruta PA**:  
 Descripción: Utilidad bruta del período anterior.  
 Fórmula: UtilidadBruta PA = CALCULATE([Utilidad Bruta], PREVIOUSYEAR(DimDate[FullDateAlternateKey]))
 
-**Utilidad Neta PA**:  
+- **Utilidad Neta PA**:  
 Descripción: Utilidad neta del período anterior.  
 Fórmula: Utilidad Neta PA = CALCULATE([Utilidad Neta], PREVIOUSYEAR(DimDate[FullDateAlternateKey]))
 
-**% Costos**:  
+- **% Costos**:  
 Descripción: Calcula el porcentaje del costo.  
 Fórmula: % Costos = DIVIDE([Costos], [Ingresos])
 
-**% Margen Bruto**:  
+- **% Margen Bruto**:  
 Descripción: Porcentaje del margen bruto.  
 Fórmula: % Margen Bruto = DIVIDE([Utilidad Bruta], [Ingresos])
 
-**% Margen de Utilidad Neta**:  
+- **% Margen de Utilidad Neta**:  
 Descripción: Porcentaje de margen de utilidad neta.  
 Fórmula: % Margen de Utilidad Neta = DIVIDE([Utilidad Neta], [Ingresos])
 
-**% MargenUtilidadBruta**:  
+- **% MargenUtilidadBruta**:  
 Descripción: Porcentaje del margen de utilidad bruta.  
 Fórmula: % MargenUtilidadBruta = DIVIDE([Utilidad Bruta], [Ingresos])
 
-**% Ratio Costo Operacional PA**:  
+- **% Ratio Costo Operacional PA**:  
 Descripción: Porcentaje del ratio de costo operacional del período anterior.  
 Fórmula: % Ratio Costo Operacional PA = DIVIDE([Costo Total + Envio PA], [Ingresos PA])
 
-**% Ratio de Costo Operacional**:  
+- **% Ratio de Costo Operacional**:  
 Descripción: Porcentaje del ratio de costo operacional.  
 Fórmula: % Ratio de Costo Operacional = DIVIDE([Costo Total + Envio], [Ingresos])
 
-**Cantidad Clientes**:  
+- **Cantidad Clientes**:  
 Descripción: Recuento de la cantidad de clientes.  
 Fórmula: Cantidad Clientes = COUNT(DimCustomer[CustomerKey])
 
-**Cantidad Vendida**:  
+- **Cantidad Vendida**:  
 Descripción: Suma total de las ventas.  
 Fórmula: Cantidad Vendida = SUM(FactInternetSales[OrderQuantity])
 
-**Costo de Envio**:  
+- **Costo de Envio**:  
 Descripción: Suma del precio del costo de envío.  
 Fórmula: Costo de Envio = SUM(FactInternetSales[Freight])
 
-**Costo Total + Envio**:  
+- **Costo Total + Envio**:  
 Descripción: Suma total del costo más el costo del envío.  
 Fórmula: Costo Total + Envio = SUMX(FactInternetSales, FactInternetSales[TotalProductCost] + FactInternetSales[Freight])
 
-**Impuestos**:  
+- **Impuestos**:  
 Descripción: Suma de los impuestos.  
 Fórmula: Impuestos = SUM(FactInternetSales[TaxAmt])
 
-**Ingresos**:  
+- **Ingresos**:  
 Descripción: Suma de los ingresos generados.  
 Fórmula: Ingresos = SUM(FactInternetSales[SalesAmount])
 
-**Ingresos Acumulados**:  
+- **Ingresos Acumulados**:  
 Descripción: Ingresos acumulados por período.  
 Fórmula: Ingresos Acumulados = CALCULATE([Ingresos], DATESYTD(DimDate[FullDateAlternateKey]))
 
-**Utilidad Bruta**:  
+- **Utilidad Bruta**:  
 Descripción: Calcula la utilidad bruta restando costos a ingresos.  
 Fórmula: Utilidad Bruta = [Ingresos] - [Costos]
 
-**Utilidad Neta**:  
+- **Utilidad Neta**:  
 Descripción: Calcula la utilidad neta obtenida.  
 Fórmula: Utilidad Neta = [Ingresos] - [Costos] - [Costo de Envio] - [Impuestos]
 
-**Variación**:  
+- **Variación**:  
 Descripción: Variación entre el período actual y el período anterior.  
 Fórmula: Variación = [Ingresos] - [Ingresos PA]
 
-**% Variacion COGS**:  
+- **% Variacion COGS**:  
 Descripción: Porcentaje de variación del costo de bienes vendidos.  
 Fórmula: % Variacion COGS = DIVIDE([COGS] - [COGS PA], [COGS PA])
 
-**% Variación Ingresos**:  
+- **% Variación Ingresos**:  
 Descripción: Porcentaje de variación de los ingresos.  
 Fórmula: % Variación Ingresos = DIVIDE([Ingresos] - [Ingresos PA], [Ingresos PA])
 
-**% Variacion Margen Neto**:  
+- **% Variacion Margen Neto**:  
 Descripción: Porcentaje de variación del margen de utilidad neta.  
 Fórmula: % Variacion Margen Neto = DIVIDE([Utilidad Neta] - [Utilidad Neta PA], [Utilidad Neta PA])
 
-**% Variación Utilidad Bruta**:  
+- **% Variación Utilidad Bruta**:  
 Descripción: Porcentaje de variación de la utilidad bruta.  
 Fórmula: % Variación Utilidad Bruta = DIVIDE([Utilidad Bruta] - [Utilidad Bruta PA], [Utilidad Bruta PA])
 
-**Variación Costos**:  
+- **Variación Costos**:  
 Descripción: Variación en los costos entre períodos.  
 Fórmula: Variación Costos = [Costos] - [Costos PA]
 
-**Variacion de Clientes**:  
+- **Variacion de Clientes**:  
 Descripción: Variación en la cantidad de clientes entre períodos.  
 Fórmula: Variacion de Clientes = [Cantidad Clientes] - [Cantidad Clientes PA]
 
-**Variacion de costo operacional**:  
+- **Variacion de costo operacional**:  
 Descripción: Variación en el costo operacional entre períodos.  
 Fórmula: Variacion de costo operacional = [Costo Total + Envio] - [Costo Total + Envio PA]
 
-**Variación Ingresos**:  
+- **Variación Ingresos**:  
 Descripción: Variación en los ingresos entre períodos.  
 Fórmula: Variación Ingresos = [Ingresos] - [Ingresos PA]
 
-**Variacion Utilidad Bruta**:  
+- **Variacion Utilidad Bruta**:  
 Descripción: Variación en la utilidad bruta entre períodos.  
 Fórmula: Variacion Utilidad Bruta = [Utilidad Bruta] - [Utilidad Bruta PA]
 
-**Variacion Utilidad Neta**:  
+- **Variacion Utilidad Neta**:  
 Descripción: Variación en la utilidad neta entre períodos.  
 Fórmula: Variacion Utilidad Neta = [Utilidad Neta] - [Utilidad Neta PA]
 
