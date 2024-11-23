@@ -5,7 +5,7 @@
 *Nombre del autor*: Ignacio Cardetti  
 *Email*: nachocardetti1@gmail.com  
 *Cohorte*: DA-FT 05  
-*Fecha de entrega*: 08/08/2024  
+*Fecha de entrega*: 08/08/2024 
 
 ---
 
